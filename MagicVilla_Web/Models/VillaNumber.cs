@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace MaigicVilla_VillaAPI.Models
+namespace MagicVilla_Web.Models
 {
     public class VillaNumber
     {
