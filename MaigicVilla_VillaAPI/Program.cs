@@ -41,4 +41,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Apply pending EF Core migrations on startup to create/update the database
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
+
 app.Run();
